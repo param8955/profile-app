@@ -1,0 +1,113 @@
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+/* 
+
+// Small devices (portrait phones, 576px and up) */
+@media (max-width: 576px) { 
+    .left-div > div{
+        justify-content: space-between !important;
+    }
+    .div_open{
+        height: 50vh;
+    }
+
+
+
+    .input-search  {
+        width: 100%;
+    display: flex;
+    margin: 10px 0px;
+}
+
+.input-search + .align > .dropdown{
+    width: 100%;
+}
+.left-div, .right-div{
+    padding: 18px 12px;
+}
+.back-link{
+    margin-bottom: 12px;
+}
+.profile-img{
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+}
+.user_name {
+    font-size: 21px;}
+
+    .sort_name{
+        font-size: 11px;
+        margin-left: 2px;
+    }
+    .user-icon {
+        padding: 0px 2px;
+    }
+    .user-icon + .btn-sm {
+        font-size: 8px !important;
+    }
+    .tabs-bio{
+        margin-left: 0px ;
+    }
+    .tabs-bio .nav-tabs .nav-item .nav-link{
+        border: 1px solid var(--bg-1);
+    }
+    .tab-pane .section-box .align >span{
+        max-width: 50%;
+    }
+
+    .tab-pane >.section-box .align >.btn-sm.me-1{
+        margin-bottom: 10px;
+    }
+.doc-tab{
+    margin-top: 44px;
+}
+.doc-tab .nav-tabs {
+    position: absolute;
+    left: 12px;
+    top: -4.9%;
+    flex-direction: row !important;
+}
+.doc-tab button.nav-link.active::after{
+    width : 25px;
+    height : 5px;
+    bottom: 0;
+    border-radius: 10px 10px 0px 0px;
+    left: 5%;
+}
+    }
+/* 
+// Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    body{
+        background: rgb(37, 172, 60);
+    }
+ }
+/* 
+// Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    body{
+        background: rgb(247, 0, 255);
+    }
+ }
+/* 
+// Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    body{
+        background: rgb(219, 81, 81);
+    }
+ }
+/* 
+// X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    body{
+        background: rgb(221, 19, 19);
+    }
+ }
+/* 
+// XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    body{
+        background: rgb(156, 167, 10);
+    }
+ }
