@@ -1,483 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="Css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="font/stylesheet.css">
-    <link rel="stylesheet" href="Css/style.css">
-    <link rel="stylesheet" href="Css/responsive.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task fo ui designer</title>
 </head>
+<style>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Inter", sans-serif;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px 50px;
+        box-shadow: 0 0 14px 4px #00000029;
+    }
+
+    .top-header {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .top-header span.line {
+        height: 0.9px;
+        background: #C8C8C8;
+        flex: 1;
+    }
+
+    h2.top-heading {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0px;
+        color: #FF6B82;
+    }
+
+   
+
+    .form-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    .label-item {
+        display: flex;
+        gap: 12px;
+        border: 0.9px solid #C8C8C8;
+        padding: 22px 20px;
+        position: relative;
+          height: 40px;
+        transition: height .5s linear;
+    }
+.label-item.active{
+    border: 2px solid #FF6B82;
+     height: 160px;
+}
+    span.badge {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0;
+        text-align: center;
+        background: #FF6B82;
+        color: #fff;
+        padding-inline: 6px;
+    }
+
+    h4.title {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0px;
+        display: inline-block;
+        margin: 0px;
+    }
+
+    .containt {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .unit-select {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    span.left-content {
+        display: flex;
+        flex-direction: column;
+        gap: 23px 0px;
+    }
+
+    h3.price {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 100%;
+        letter-spacing: 0;
+        margin: 0px;
+    }
+
+    span.overright-price {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 100%;
+        letter-spacing: 0px;
+        text-decoration: line-through;
+        color: #0000004d;
+    }
+
+    h5.sub-title {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0px;
+        margin: 2px 0px;
+    }
+
+    input[type="radio"] {
+        position: relative;
+        appearance: none;
+        width: 10px;
+    }
+
+    input[type="radio"]:after {
+        content: "";
+        outline: 1px solid #FF6B82;
+        border: 2px solid #fff;
+        height: 10px;
+        width: 10px;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 30%;
+        border-radius: 10px;
+    }
+
+    input[type="radio"]:checked:after {
+        background: #FF6B82;
+    }
+    table.product-options {
+    padding-left: 22px;
+}
+table.product-options th, table.product-options td, table.product-options td select {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: left;
+}
+table.product-options td select {
+    border: 1px solid #D9D9D9;
+    padding: 7px 7px 5px 7px;
+    border-radius: 2px;
+    appearance: none;
+    min-width: 72px;
+    font-size: 11px;
+   background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 3px center;
+  background-size: 18px;
+}
+span.badge-medium {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    padding: 6px 11px;
+    background: #FF6B82;
+    color: #fff;
+    position: absolute;
+    top: -5px;
+    width: max-content;
+    right: 10px;
+    border-radius: 0px 0px 3px 3px;
+}
+span.badge-medium:before {
+    content: "";
+    background: #D7445B;
+    height: 4px;
+    width: 109%;
+    display: inline-block;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    clip-path: polygon(4% 0, 96% 0, 100% 100%, 0% 100%);
+    z-index: -1;
+    top: 0px;
+}
+
+.table-contant,span.badge-medium{
+    height: 0px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s linear;
+}
+.label-item.active .table-contant,.label-item.active span.badge-medium{
+opacity: 1;
+    visibility: visible;
+    height: fit-content;
+}
+span.bottom-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #FF6B82;
+}
+
+span.totle {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0;
+}
+
+.flex-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+span.bottom-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #FF6B82;
+}
+
+span.totle {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0;
+}
+
+.flex-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+span.itelic-text {
+    font-weight: 400;
+    font-style: Italic;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0;
+    display: block;
+    text-align: right;
+    color: #00000066;
+}
+button[type="submit"] {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #fff;
+    display: flex;
+    width: 100%;
+    padding: 13px;
+    margin: 20px 0px 5px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 4px;
+    background: #FF6B82;
+    border: none;
+    cursor: pointer;
+}
+</style>
+
+</style>
+
 <body>
-    <section class="bg-1">
-
-    
-    <div class="container-fluid ">
-       <div class="row">
-        <div class="col-lg-2 bg-white left-div ">
-        
-           <div class="d-flex align-items-center justify-content-evenly">
-                <span class="menu-burger"><i class="fa-solid fa-bars"></i></span>
-          
-            
-         
-
-
-         
-
-
-
-
-
-        <a href="#">  <img src="images/Capture.JPG" alt="" width="105px"></a>
-    </div>
-        <div class="menu-div div_open mt-lg-5 mt-2">
-            
-
-            <div class="dropdown">
-                <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Manage
-                </button>
-                <div class="dropdown-menu border-0 w-100" >
-                  <a class="dropdown-item" href="#">Moderate</a>
-                  <a class="dropdown-item" href="#">Tag</a>
-                  <a class="dropdown-item" href="#">Compliance</a>
-                  <a class="dropdown-item" href="#">Payments</a>
-                  <a class="dropdown-item" href="#">Advance Settings</a>
-                </div>
-              </div>
-            <div class="dropdown">
-                <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Users
-                </button>
-                <div class="dropdown-menu border-0 w-100" >
-                  <a class="dropdown-item" href="#">Admin</a>
-                  <a class="dropdown-item" href="#">Customer</a>
-                  <a class="dropdown-item" href="#">Contact</a>
-                </div>
-              </div>
-            <div class="dropdown">
-                <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Engagements
-                </button>
-                <div class="dropdown-menu border-0 w-100" >
-                  <a class="dropdown-item" href="#">Projects</a>
-                  <a class="dropdown-item" href="#">Calls</a>
-                  <a class="dropdown-item" href="#">Calendar</a>
-                </div>
-              </div>
-            <div class="dropdown">
-                <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Experts
-                </button>
-                <div class="dropdown-menu border-0 w-100" >
-                    
-                <a class="search-btn" href="#">
-                    Expert Search
-                </a>
-                   
-                   
-                  <a class="dropdown-item" href="#">Value Chain</a>
-                 
-                </div>
-              </div>
-            
-              
+    <form class="container">
+        <div class="top-header">
+            <span class="line"></span>
+            <h2 class="top-heading">YAY! It's BOGO</h2>
+            <span class="line"></span>
         </div>
-    </div>
-    <div class="col-lg-10 right-div">
-        <div class="row mb-lg-5 mb-3 ">
-            <div class="col-lg-3 align justify-content-start"><h5>Expert Profile</h5></div>
-          <div class="col-lg-7 align justify-content-start">
-            <div class="input-search">
-                <label for="basic-addon1" name="search"><i class="fa-solid fa-magnifying-glass"></i></label>
-                <input type="search" id="basic-addon1" placeholder="Search By Name, Expertise, Status">
-              </div>
-          </div>
-           
-<div class="col-lg-2 align ">
-    <div class="dropdown w-100 ">
-        <a class=" profile-btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-solid fa-circle-user bg-dark rounded-circle"></i> Vijay Sharma
-        </a>
-        <div class="dropdown-menu">
+        <div class="form-body">
+            <div class="label-item">
+                <div class="containt">
+                    <span class="left-content">
+                        <div class="unit-select">
+                            <input type="radio" id="unit1" name="unit">
+                            <label for="unit1">
+                                <div>
+                                    <h4 class="title">1 Unit </h4> <span class="badge">10% Off</span>
+                                </div>
+                                <h5 class="sub-title">Standard Price</h5>
+                            </label>
+                        </div>
+                    </span>
+                    <span class="right-content">
+                        <h3 class="price">$10.00 USD</h3>
+                        <span class="overright-price">$24.00 USD</span>
+                    </span>
+                </div>
 
-        </div>
-    </div>
-</div>
-          
-        </div>
-        <div class="row pt-lg-4 pt-2">
-          <div class="col-lg-9 ">
-            <div class="align justify-content-between">
-            <a href="#" class="back-link"><span class="icon-link"><i class="fa-solid fa-chevron-left"></i></span> Back to Expert</a>
-            <div class="edit-link">
-              <a href="" class="back-link"><span class="icon-link"><i class="fa-solid fa-pen"></i></span></a>
-              <a href="" class="back-link"><span class="icon-link active"><i class="fa-solid fa-pen-to-square"></i></span></a>
-              <a href="" class="back-link"><span class="icon-link"><img src="images/LOG1.JPG" alt="" width="16px"></span></a>
-              <a href="" class="back-link"><span class="icon-link"><img src="images/logo2.JPG" alt="" width="16px"></span></a>
-              <a href="" class="back-link"><span class="icon-link"><img src="images/logo3.JPG" alt="" width="16px"></span></a>
-              <a href="" class="back-link"><span class="icon-link"><img src="images/logo4.JPG" alt="" width="16px"></span></a>
-             
             </div>
-          </div>
-<!-- profile-section -->
-<div class="bio">
-  <div class="section-box pb-lg-0">
-    <div class="align justify-content-start">
-    <div class="profile-img "><img src="images/user.JPG" alt="" width="100%" height="100%"   style="transform: scale(1.2);"></div>
-    <div class="user-bio">
-      <div>
-        <span class="user_name">Mir Azahar</span>
-        <span class="sort_name">(Azahar)</span>
-        <span class="user-icon"><img src="images/dimond icon.JPG" alt="" width="30px"></span>
-      <div class="btn btn-sm  rounded-pill h6 mb-0" style="background: #6B577311;">Confirmed</div>
-      </div>
-      <div class="align justify-content-start mt-3 phone">
-        <a href="#" class="d-inline-block me-lg-0 me-2"> <i class="fa-regular fa-envelope me-2"></i> mir.azhar@gmail.com</a>
-        <a href="#" class="d-inline-block ms-lg-4 "> <i class="fa-solid fa-phone-volume"></i> +91 1234567890</a>
-      
-      
-      </div>
-      <div class="align justify-content-between mt-lg-3 pt-lg-2 mt-2 phone">
-        <a href="#" class="d-inline-block me-1"> India</a>
-        <span href="#" class="d-inline-block me-1"> |</span>
-        <a href="#" class="d-inline-block me-1">35367467</a>
-        <a href="#" class="d-inline-block ms-lg-4 ms-2"> Internal <i class="fa-solid fa-star ms-1" style="color: var(--bg-2);"></i> 4.6 </a>
-        <span href="#" class="d-inline-block mx-lg-3 mx-1" style="color: var(--bg-2)";>|</span>
-        <a href="#" class="d-inline-block "> External <i class="fa-solid fa-star mx-1" style="color: var(--bg-2);"></i> 4.6 </a>
-        <a href="#" class="d-inline-block mx-lg-4  mx-1"> Expert Type:</a>
-        <a href="#" class="d-inline-block "> Referral Admin</a>
-      
-      </div>
-    
+            <div class="label-item active">
+                <div class="containt">
+                    <span class="left-content">
+                        <div class="unit-select">
+                            <input type="radio" id="unit1" name="unit">
+                            <label for="unit1">
+                                <div>
+                                    <h4 class="title">2 Unit </h4> <span class="badge">20% Off</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="unit-select table-contant">
+                            <table class="product-options">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Size</th>
+                                        <th>Colour</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#1</td>
+                                        <td>
+                                            <select>
+                                                <option>S</option>
+                                                <option>M</option>
+                                                <option>L</option>
+                                                <option>XL</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option>Black</option>
+                                                <option>White</option>
+                                                <option>Red</option>
+                                                <option>Blue</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#2</td>
+                                        <td>
+                                            <select>
+                                                <option>S</option>
+                                                <option>M</option>
+                                                <option>L</option>
+                                                <option>XL</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option>Colour</option>
+                                                <option>Black</option>
+                                                <option>White</option>
+                                                <option>Red</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-    </div>
-  </div>
-    <div class="line mt-3"></div>
+                        </div>
+                    </span>
+                    <span class="right-content">
+                        <span class="badge-medium">MOST POPULAR</span>
+                        <h3 class="price">$18.00 USD</h3>
+                        <span class="overright-price">$24.00 USD </span>
+                    </span>
+                </div>
 
+            </div>
+            <div class="label-item">
+                <div class="containt">
+                    <span class="left-content">
+                        <div class="unit-select">
+                            <input type="radio" id="unit1" name="unit">
+                            <label for="unit1">
+                                <div>
+                                    <h4 class="title">3 Unit </h4> <span class="badge">10% Off</span>
+                                </div>
+                                <h5 class="sub-title">Standard Price</h5>
+                            </label>
+                        </div>
+                    </span>
+                    <span class="right-content">
+                        <h3 class="price">$24.00 USD</h3>
+                        <span class="overright-price">$24.00 USD</span>
+                    </span>
+                </div>
 
-    <div class="tabs-bio">
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item ps-lg-0" role="presentation">
-          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">My Profile</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">My Referral Expert</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">My Referral Call Logs</button>
-        </li>
-      </ul>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-   
-  
-
-
-  </div>
-  <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-      <div class="section-box">
-<h6 class="tab-heading">Basic Details</h6>
-<div class="align justify-content-start mb-2"><span>Bio:</span> <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s</p></div>
-<div class="align justify-content-start mb-2"><span>Date of Birth:</span> <p>07/07/1997</p></div>
-<div class="align justify-content-start mb-2"><span>Selling price:</span> <p>₹100/hr</p></div>
-<div class="align justify-content-lg-start justify-content-between mb-2"><span>Domains:</span>
-   <btn class="btn btn-sm me-1 rounded-pill text-white fw-light " style="background: var(--bg-2);  font-size: 14px;">Domains1</btn>
-   <btn class="btn btn-sm me-1 rounded-pill text-white  fw-light" style="background: var(--bg-2); font-size: 14px;">Domains2</btn>
-   <btn class="btn btn-sm me-1 rounded-pill text-white fw-light " style="background: var(--bg-2); font-size: 14px;">Domains3</btn>
-   <btn class="btn btn-sm me-1 rounded-pill text-white  fw-light" style="background: var(--bg-2); font-size: 14px;">Domains4</btn>
-  
-  
-  
-  
-  </div>
-<div class="align justify-content-lg-start justify-content-between mb-2"><span>Functions:</span>
-
-
-  <btn class="btn btn-sm me-1 rounded-pill text-white fw-light " style="background: var(--bg-2);  font-size: 14px;">Function1</btn>
-  <btn class="btn btn-sm me-1 rounded-pill text-white  fw-light" style="background: var(--bg-2); font-size: 14px;">Function2</btn>
-  <btn class="btn btn-sm me-1 rounded-pill text-white fw-light " style="background: var(--bg-2); font-size: 14px;">Function3</btn>
-  <btn class="btn btn-sm me-1 rounded-pill text-white  fw-light" style="background: var(--bg-2); font-size: 14px;">Function4</btn>
-</div>
-    </div>
-    <div class="section-box">
-      <h6 class="tab-heading">About</h6>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only fi</p>
-    </div>
-    <div class="section-box">
-      <h6 class="tab-heading">Experience</h6>
-      <div class="row">
-        <div class="col-1"><img src="images/company-logo.JPG" alt="" height="auto" width="44px" style="vertical-align: top;"></div>
-        <div class="col-11">
-          <span class="company-name">SNOWTECH</span>
-          <p class="position">UI/UX Designer</p>
-          <p class="exprince">Aug 2017 - Apr 2021 · 3 yrs 9 mos</p>
-          <p>User Experience Design (UED) · UX Research · User Interface Prototyping · Information Architecture · User-centered ..</p>
-       
-          <div class="line my-2"></div>
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-1"><img src="images/company-logo2.JPG" alt="" height="auto" width="44px" style="vertical-align: top;"></div>
-        <div class="col-11">
-          <span class="company-name">XYZTECH</span>
-          <p class="position">UI/UX Designer</p>
-          <p class="exprince">Aug 2017 - Apr 2021 · 3 yrs 9 mos</p>
-          <p>User Experience Design (UED) · UX Research · User Interface Prototyping · Information Architecture · User-centered ..</p>
-       
-     
+        <div class="form-footer">
+            <div class="flex-wrap">
+                <span class="bottom-text">Free Delivery</span>
+                <span class="totle">Total : $18.00 USD</span>
+            </div>
+              <button type="submit">
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.99998 1.33334V10.6667M1.33331 6.00001H10.6666" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ Add to Cart</button>
+<span class="itelic-text">@ Powered by Pumper</span>
         </div>
-      </div>
-    </div>
-  
-    <div class="section-box">
-      <h6 class="tab-heading">Education</h6>
-      <div class="row">
-        <div class="col-1"><img src="images/school-logo.JPG" alt="" height="auto" width="44px" style="vertical-align: top;"></div>
-        <div class="col-11">
-          <span class="company-name">Delhi University</span>
-          <p class="position">Bsc(H) computer science, Computer Science</p>
-          <p class="exprince">Aug 2017 - Apr 2021 · 3 yrs</p>
-          
-         
-        </div>
-      </div>
-    
-    </div>
-    <div class="section-box">
-      <h6 class="tab-heading">Award & Reconition</h6>
-      <div class="row">
-        <div class="col-1 " ><p>11/03/2016</p></div>
-        <div class="col-11 mt-lg-0 mt-2">
-          <span class="company-name fw-bold ps-lg-3"> <img src="images/cup.JPG" alt=""> UI Designer Cup</span>
-          <p class="position  ps-lg-3">1st Place</p>
-          <p class="exprince  ps-lg-3">Win the UI Designer cup and cash, and selected in a company</p>
-          
-         
-        </div>
-      </div>
-    
-    </div>
-    <div class="section-box">
-      <h6 class="tab-heading">Web Handle</h6>
-      <div class="row">
-        <div class="col-lg-2 col-6 mt-lg-0 mt-2" >
-         <a href="#" class="text-decoration-none"> <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-          <svg width="31px" height="31px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="24" cy="24" r="20" fill="#1DA1F2"/>
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M36 16.3086C35.1177 16.7006 34.1681 16.9646 33.1722 17.0838C34.1889 16.4742 34.9697 15.5095 35.3368 14.36C34.3865 14.9247 33.3314 15.3335 32.2107 15.5551C31.3123 14.5984 30.0316 14 28.6165 14C25.8975 14 23.6928 16.2047 23.6928 18.9237C23.6928 19.3092 23.7368 19.6852 23.8208 20.046C19.7283 19.8412 16.1005 17.8805 13.6719 14.9015C13.2479 15.6287 13.0055 16.4742 13.0055 17.3766C13.0055 19.0845 13.8735 20.5916 15.1958 21.4747C14.3878 21.4491 13.6295 21.2275 12.9647 20.8587V20.9203C12.9647 23.3066 14.663 25.296 16.9141 25.7496C16.5013 25.8616 16.0661 25.9224 15.6174 25.9224C15.2998 25.9224 14.991 25.8912 14.6902 25.8336C15.3166 27.7895 17.1357 29.2134 19.2899 29.2534C17.6052 30.5733 15.4822 31.3612 13.1751 31.3612C12.7767 31.3612 12.3848 31.338 12 31.2916C14.1791 32.6884 16.7669 33.5043 19.5475 33.5043C28.6037 33.5043 33.5562 26.0016 33.5562 19.4956C33.5562 19.282 33.5522 19.0693 33.5418 18.8589C34.5049 18.1629 35.34 17.2958 36 16.3086Z" fill="white"/>
-          </svg>
-        <span style="color: #2779C3; font-size: 10.76px;" >Copy link</span>
-        </a>
-        </div>
-        <div class="col-lg-2 col-6 mt-lg-0 mt-2" >
-         <a href="#" class="text-decoration-none"> <?xml version="1.0" encoding="utf-8"?>
 
-          <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-          <svg fill="#2779c3" height="31px" width="31px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-             viewBox="-143 145 512 512" xml:space="preserve">
-          <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M41.4,508.1H-8.5V348.4h49.9
-            V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7c18.4,0,29.7,11.9,30.1,27.7
-            C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4c-14.9,0-23.2,10-27,19.6
-            c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1c3.3-11,21.2-26.6,49.8-26.6c35.5,0,63.3,23,63.3,72.4V508.1z
-            "/>
-          </svg>
-        <span style="color: #2779C3; font-size: 10.76px;" >Copy link</span>
-        </a>
-        </div>
-        <div class="col-lg-2 col-6 mt-lg-0 mt-2" >
-         <a href="#" class="text-decoration-none"> <?xml version="1.0" encoding="UTF-8"?>
-         <img src="images/instagram.png" alt="" width="31px" height="31px">
-        <span style="color: #2779C3; font-size: 10.76px;" >Copy link</span>
-        </a>
-        </div>
-        <div class="col-lg-2 col-6 mt-lg-0 mt-2" >
-         <a href="#" class="text-decoration-none"> <img src="images/facebook.png" alt="" width="31px" height="31px">
-        <span style="color: #2779C3; font-size: 10.76px; " >Copy link</span>
-        </a>
-        </div>
-       
-      </div>
-    
-    </div>
-    <div class="section-box">
-      <h6 class="tab-heading">Snippet</h6>
-      <p class="pb-2">Snippet Heading will be here</p>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only fi</p>
-      <p class="pb-2 mt-4">Snippet Heading will be here</p>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only fi</p>
-    </div>
-  
-  
-  </div>
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><div class="section-box"></div></div>
-    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><div class="section-box"></div></div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-          </div>
-          <div class="col-lg-3 doc-tab">
-
-            <nav>
-              <div class="nav nav-tabs flex-column border-0" id="nav-tab" role="tablist">
-                <button class="nav-link active" id="nav-home-tab1" data-bs-toggle="tab" data-bs-target="#nav-home1" type="button" role="tab" aria-controls="nav-home1" aria-selected="true"><i class="fa-solid fa-paperclip"></i></button>
-                <button class="nav-link" id="nav-profile-tab1" data-bs-toggle="tab" data-bs-target="#nav-profile1" type="button" role="tab" aria-controls="nav-profile1" aria-selected="false"><i class="fa-solid fa-route"></i></button>
-                
-              </div>
-            </nav>
-            <div class="tab-content" id="nav-tabContent">
-              <div class="tab-pane fade show active" id="nav-home1" role="tabpanel" aria-labelledby="nav-home-tab1"> 
-                
-                
-                <div class="upload-doc mt-0">
-                <div class="row mb-5">
-                  <div class="col-6">
-                    <h6>Attachement</h6>
-                  </div>
-                  <div class="col-6 text-end"><i class="fa-solid fa-xmark"></i></div>
-                </div>
-                <div class="upload-btn-wrapper mb-3">
-                  <button class="btn">+ Upload Attachment</button>
-                  <input type="file" name="myfile" />
-                </div>
-                <p class="my-3">Financial Documents</p>
-                <div class="d-flex align-items-center justify-content-between my-3">
-                
-                  <div class=" d-inline-flex align-items-start " style="max-width:65%;"> <img src="images/docmunt.JPG" alt="" width="20px"> &nbsp;<p>Canceled Cheque</p></div>
-                  <div class=" d-inline-block " style="width: max-content;"> 
-                    <img src="images/download.JPG" alt="" width="18px">
-                    <img src="images/eye.JPG" alt="" width="22px">
-                    <img src="images/delete.JPG" alt="" width="18px">
-                  </div>
-                </div>
-                <div class="d-flex align-items-center  justify-content-between my-3">
-                 
-                  <div class=" d-inline-flex align-items-start" style="max-width:65%;"> <img src="images/docmunt.JPG" alt="" width="20px">  &nbsp;<p>Pan Card</p></div>
-                  <div class=" d-inline-block " style="width: max-content;"> 
-                    <img src="images/download.JPG" alt="" width="18px">
-                    <img src="images/eye.JPG" alt="" width="22px">
-                    <img src="images/delete.JPG" alt="" width="18px">
-                  </div>
-                </div>
-                <div class="d-flex align-items-start  justify-content-between my-3">
-                  
-                  <div class="d-inline-flex align-items-start" style="max-width:65%;"> <img src="images/docmunt.JPG" alt="" width="20px">  &nbsp;<p>PE Certificate</p></div>
-                  <div class=" d-inline-block " style="width: max-content;"> 
-                    <img src="images/download.JPG" alt="" width="18px">
-                    <img src="images/eye.JPG" alt="" width="22px">
-                    <img src="images/delete.JPG" alt="" width="18px">
-                  </div>
-                </div>
-                
-                
-                <p class="my-3">Others</p>
-                <div class="d-flex align-items-start  justify-content-between my-3">
-                
-                  <div class=" d-inline-flex align-items-start" style="max-width:65%;"> <img src="images/docmunt.JPG" alt="" width="20px">  &nbsp;<p>CV</p></div>
-                  <div class=" d-inline-block text-end" style="width: max-content;"> 
-                    <img src="images/download.JPG" alt="" width="18px">
-                    <img src="images/eye.JPG" alt="" width="22px">
-                    <img src="images/delete.JPG" alt="" width="18px">
-                  </div>
-                </div>
-                <div class="d-flex align-items-start  justify-content-between my-3">
-                 
-                  <div class="d-inline-flex align-items-start" style="max-width:65%;"> <img src="images/docmunt.JPG" alt="" width="20px">  &nbsp;<p>Bank Details</p></div>
-                  <div class=" d-inline-block text-end" style="width: max-content;"> 
-                    <img src="images/download.JPG" alt="" width="18px">
-                    <img src="images/eye.JPG" alt="" width="22px">
-                    <img src="images/delete.JPG" alt="" width="18px">
-                  </div>
-                </div>
-                
-                
-                
-                
-                
-                
-                
-                
-                <p class="my-3">Invoices</p>
-                <div class="d-flex align-items-start  justify-content-between my-3">
-                  
-                  <div class=" d-inline-flex align-items-start" style="max-width:65%;"> <img src="images/docmunt.JPG" alt="" width="20px"> &nbsp; <p>Invoice_2270_22271</p></div>
-                  <div class=" d-inline-block text-end" style="width: max-content;"> 
-                    <img src="images/download.JPG" alt="" width="18px">
-                    <img src="images/eye.JPG" alt="" width="22px">
-                    <img src="images/delete.JPG" alt="" width="18px">
-                  </div>
-                </div>
-                <div class="d-flex align-items-start  justify-content-between my-3">
-                
-                  <div class=" d-inline-flex align-items-start" style="max-width:65%;"> <img src="images/docmunt.JPG" alt="" width="20px">  &nbsp;<p>Invoice_2270_22271</p></div>
-                  <div class=" d-inline-block text-end" style="width: max-content;"> 
-                    <img src="images/download.JPG" alt="" width="18px">
-                    <img src="images/eye.JPG" alt="" width="22px">
-                    <img src="images/delete.JPG" alt="" width="18px">
-                  </div>
-                </div>
-                <div class="d-flex align-items-start  justify-content-between my-3">
-                 
-                  <div class=" d-inline-flex align-items-start " style="max-width:65%;"> <img src="images/docmunt.JPG" alt="" width="20px"> &nbsp;<p>Invoice_2270_22271_2270_ 22271_2270_22271_2270_ 22271_2270_22271_2270_ 22271_2270_22271</p></div>
-                  <div class=" d-inline-block text-end" style="width: max-content;"> 
-                    <img src="images/download.JPG" alt="" width="18px">
-                    <img src="images/eye.JPG" alt="" width="22px">
-                    <img src="images/delete.JPG" alt="" width="18px">
-                  </div>
-                </div>
-                
-                
-                
-                            </div>
-                          
-                          </div>
-              <div class="tab-pane fade" id="nav-profile1" role="tabpanel" aria-labelledby="nav-profile-tab1">
-                
-                
-              
-              
-              </div>
-             
-           
-          </div>
-        </div>
-    </div>
-   
-    </div>
-    </div>
-</section>
-
-
-
-
-<script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="js/bootstrap.bundle.js"></script>
-<script src="js/main.js"></script>
+    </form>
 </body>
+<script>
+    let tabs = document.querySelectorAll('.label-item');
+    tabs.forEach((item)=>{
+        item.addEventListener("click", function(){
+           tabs.forEach(subitem => subitem.classList.remove("active"));
+         item.classList.add("active")
+           
+        })
+    })
+</script>
+
 </html>
